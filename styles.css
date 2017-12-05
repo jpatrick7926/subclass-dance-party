@@ -6,27 +6,34 @@ body{
   background: url('https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg') no-repeat fixed center;
   background-size: cover;
   font-size: 18px;  
+  font-family: "Copperplate", Serif;
 }
 body, a:link, a:visited, a:active{
   color: blue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
-  background-color: orange;
+.title{
+  padding: 5px;
+  float: left;
+  background-color: lightblue;
+}
+.button{
+  padding: 5px 12px;
+  float: right;
+  background-color: yellow;
+  border-radius: 50px;
+  margin: 5px;
 }
 .topbar{
-  height:32px;
-  background-color: white;
-}
-.title{
-  background-color: #777;
+  height: 32px;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position: sticky;
 }
-#stephen {
+#Stephen {
   content: url('https://s3.amazonaws.com/user-media.venngage.com/891597-d22540758613b1eee33391f9d8a1733e.png');
+}
+#Kobe {
+
+}
+#Durant {
 }
