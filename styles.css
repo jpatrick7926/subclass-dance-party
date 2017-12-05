@@ -3,19 +3,21 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
-  font-size: 18px;
+  background: url('https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg') no-repeat fixed center;
+  background-size: cover;
+  font-size: 18px;  
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: blue;
 }
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+  background-color: orange;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: white;
 }
 .title{
   background-color: #777;
@@ -23,5 +25,8 @@ body, a:link, a:visited, a:active{
 .dancer{
   border:10px solid red;
   border-radius:10px;
-  position:absolute;
+  position: sticky;
+}
+#stephen {
+  content: url('https://s3.amazonaws.com/user-media.venngage.com/891597-d22540758613b1eee33391f9d8a1733e.png');
 }
