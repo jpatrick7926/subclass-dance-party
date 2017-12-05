@@ -27,13 +27,34 @@ body, a:link, a:visited, a:active{
   height: 32px;
 }
 .dancer{
-  position: sticky;
+  position: absolute;
 }
 #Stephen {
+  margin-top: 100px;
   content: url('https://s3.amazonaws.com/user-media.venngage.com/891597-d22540758613b1eee33391f9d8a1733e.png');
 }
-#Kobe {
-
-}
 #Durant {
+  content: url('https://qph.ec.quoracdn.net/main-qimg-f4eeb92f1b94b433f9c96d117566b065');
+  margin-bottom: 100px;
+  width: 350px;
+  height: 500px;
+}
+#LeBron {
+  content: url('http://i.imgur.com/tx9f5QD.png');
+  width: 350px;
+  height: 500px;
+}
+.lineUp {
+  top: 500px;
+}
+.solids {
+  content: url('https://fcit.usf.edu/matrix/wp-content/uploads/2017/01/DanceBot-3-LG.gif');
+  margin-top: 200px;
+  width: 200px;
+  height: 300px;
+}
+.rotate {
+  width: 100px;
+  height: 100px;
+  content: url('http://i.imgur.com/oyEgJ.png');
 }

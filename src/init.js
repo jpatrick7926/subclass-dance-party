@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
-  var players = ['Stephen', 'Kobe', 'Durant'];
+  window.circles = [];
+  var players = ['Stephen', 'Durant', 'LeBron'];
   var number = 0;
   $('#createDancer').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -29,10 +30,52 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    dancer.$node[0].setAttribute('id', players[number]);
+    dancer.$node[0].setAttribute('id', players[(number % players.length)]);
     number ++;
     window.dancers.push(dancer.$node[0]);
   });
-  
+  $('#lineUp').on('click', function () {
+    $('.dancer').css('top', '300px');
+    $('.rotate').css('top', '100px');
+    var left = 10;
+    var dancerInterval = 1820 / window.dancers.length;
+    window.dancers.forEach(function(player) {
+      player.style.left = left + 'px';
+      left += dancerInterval;
+    });
+    var circleLeft = 50;
+    var circleInterval = 1820 / window.circles.length;
+    window.circles.forEach(function(logo) {
+      logo.style.left = circleLeft + 'px';
+      circleLeft += circleInterval;
+    });
+  });
+  $('#solidDancer').on('click', function(event) {
+    var solidDancerMakerFunction = $(this).data('dancer-maker-function-name');
+    var dancerMakerFunction = window[solidDancerMakerFunction];
+    
+    var dancer = new dancerMakerFunction(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(dancer.$node);
+    dancer.$node[0].setAttribute('class', 'solids');
+    $('.solids').addClass('dancer');
+  });
+  $('#rotateDancer').on('click', function(event) {
+    var DancerMakerFunction = $(this).data('dancer-maker-function-name');
+    var dancerMakerFunction = window[DancerMakerFunction];
+    
+    var dancer = new dancerMakerFunction(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(dancer.$node);
+    dancer.$node[0].setAttribute('class', 'rotate');
+    $('.rotate').addClass('dancer');
+    window.circles.push(dancer.$node[0]);
+  });
 });
 
