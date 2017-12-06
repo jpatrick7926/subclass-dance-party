@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
   window.circles = [];
-  var players = ['Stephen', 'Durant', 'LeBron'];
+  var players = ['Stephen', 'Durant', 'LeBron', 'Kobe'];
   var number = 0;
   $('#createDancer').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -75,7 +75,17 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     dancer.$node[0].setAttribute('class', 'rotate');
     $('.rotate').addClass('dancer');
+    $('.rotate').attr('id', logos[courtsCount]);
     window.circles.push(dancer.$node[0]);
+  });
+  var courts = ['https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg', 'https://s3.amazonaws.com/images.charitybuzz.com/images/152734/original.jpg_1415910574?1416330282', 'https://pbs.twimg.com/media/BrFo33JCAAAAWgq.jpg'];
+  var courtsCount = 0;
+  var logos = ['GSW', 'Lakers', 'Cavs'];
+  $('#changeBackground').on('click', function (event) {
+    $('.rotate').attr('id', logos[(courtsCount + 1) % logos.length]);
+    $('body').css('background-image', 'url(' + courts[(courtsCount + 1) % courts.length] + ')');
+    $('body').css('background-size', 'cover');
+    courtsCount++;
   });
 });
 

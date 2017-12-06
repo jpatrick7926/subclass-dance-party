@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background: url('https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg') no-repeat fixed center;
+  background-image: url('https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg');
   background-size: cover;
   font-size: 18px;  
   font-family: "Copperplate", Serif;
@@ -44,17 +44,36 @@ body, a:link, a:visited, a:active{
   width: 350px;
   height: 500px;
 }
+#Kobe {
+  margin-top: 50px;
+  width: 300px;
+  height: 450px;
+  content: url('http://i607.photobucket.com/albums/tt157/bigheadkyle2/Player%20Cuts/NBA/kobebryant.png');
+}
 .lineUp {
   top: 500px;
 }
 .solids {
-  content: url('https://fcit.usf.edu/matrix/wp-content/uploads/2017/01/DanceBot-3-LG.gif');
-  margin-top: 200px;
+  content: url('http://rs234.pbsrc.com/albums/ee284/tammy_61/cutepop.gif~c200');
+  margin-top: 150px;
   width: 200px;
   height: 300px;
 }
+#Lakers {
+  width: 150px;
+  height: 100px;
+  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/1000px-Los_Angeles_Lakers_logo.svg.png');
+}
 .rotate {
+
+}
+#GSW {
   width: 100px;
   height: 100px;
   content: url('http://i.imgur.com/oyEgJ.png');
+}
+#Cavs {
+  width: 150px;
+  height: 150px;
+  content: url('https://upload.wikimedia.org/wikipedia/en/4/4b/Cleveland_Cavaliers_logo.svg');
 }
