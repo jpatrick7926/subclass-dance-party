@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
   window.circles = [];
-  var players = ['Stephen', 'Durant', 'LeBron', 'Kobe'];
+  var players = ['Stephen', 'Durant', 'LeBron', 'Kobe', 'MJ'];
   var number = 0;
   $('#createDancer').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -35,7 +35,7 @@ $(document).ready(function() {
     window.dancers.push(dancer.$node[0]);
   });
   $('#lineUp').on('click', function () {
-    $('.dancer').css('top', '300px');
+    $('.dancer').css('top', '400px');
     $('.rotate').css('top', '100px');
     var left = 10;
     var dancerInterval = 1820 / window.dancers.length;
@@ -75,17 +75,17 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     dancer.$node[0].setAttribute('class', 'rotate');
     $('.rotate').addClass('dancer');
-    $('.rotate').attr('id', logos[courtsCount]);
+    $('.rotate').attr('id', logos[0]);
     window.circles.push(dancer.$node[0]);
   });
-  var courts = ['https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg', 'https://s3.amazonaws.com/images.charitybuzz.com/images/152734/original.jpg_1415910574?1416330282', 'https://pbs.twimg.com/media/BrFo33JCAAAAWgq.jpg'];
-  var courtsCount = 0;
-  var logos = ['GSW', 'Lakers', 'Cavs'];
+  var courts = ['https://media.nbcbayarea.com/images/WARRIORS+COURT.jpg', 'https://s3.amazonaws.com/images.charitybuzz.com/images/152734/original.jpg_1415910574?1416330282', 'https://pbs.twimg.com/media/BrFo33JCAAAAWgq.jpg', 'http://www.unitedcenter.com/flash/seating_chart/photos/basketball/courtside_southeast.jpg'];
+  var logos = ['GSW', 'Lakers', 'Cavs', 'Bulls'];
+
   $('#changeBackground').on('click', function (event) {
-    $('.rotate').attr('id', logos[(courtsCount + 1) % logos.length]);
-    $('body').css('background-image', 'url(' + courts[(courtsCount + 1) % courts.length] + ')');
+    var random = Math.floor(Math.random() * logos.length);
+    $('.rotate').attr('id', logos[random]);
+    $('body').css('background-image', 'url(' + courts[random] + ')');
     $('body').css('background-size', 'cover');
-    courtsCount++;
   });
 
 });

@@ -66,6 +66,15 @@ body, a:link, a:visited, a:active{
 #Kobe:hover{
   margin-top: -300px;
 }
+
+#MJ {
+  width: 300px;
+  height: 450px;
+  content: url('https://userscontent2.emaze.com/images/ba476dfa-0aae-4819-9bd1-f89bfbaf5f34/2f6600d3d2abb0496f9f3e1bf01eb435.png');
+}
+#MJ:hover{
+  margin-top: -450px;
+}
 .lineUp {
   top: 500px;
 }
@@ -89,4 +98,9 @@ body, a:link, a:visited, a:active{
   width: 150px;
   height: 150px;
   content: url('https://upload.wikimedia.org/wikipedia/en/4/4b/Cleveland_Cavaliers_logo.svg');
+}
+#Bulls {
+  content: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Chicago_Bulls_logo.svg/1015px-Chicago_Bulls_logo.svg.png');
+  width: 150px;
+  height: 150px;
 }
