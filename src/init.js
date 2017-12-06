@@ -87,5 +87,6 @@ $(document).ready(function() {
     $('body').css('background-size', 'cover');
     courtsCount++;
   });
+
 });
 

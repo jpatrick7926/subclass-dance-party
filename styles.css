@@ -23,6 +23,10 @@ body, a:link, a:visited, a:active{
   border-radius: 50px;
   margin: 5px;
 }
+.button:hover {
+  background-color: blue;
+  color: yellow;
+}
 .topbar{
   height: 32px;
 }
@@ -33,22 +37,34 @@ body, a:link, a:visited, a:active{
   margin-top: 100px;
   content: url('https://s3.amazonaws.com/user-media.venngage.com/891597-d22540758613b1eee33391f9d8a1733e.png');
 }
+#Stephen:hover{
+  margin-top: 50px;
+}
 #Durant {
   content: url('https://qph.ec.quoracdn.net/main-qimg-f4eeb92f1b94b433f9c96d117566b065');
-  margin-bottom: 100px;
+  margin-top: 0px;
   width: 350px;
   height: 500px;
+}
+#Durant:hover{
+  margin-top: -150px;
 }
 #LeBron {
   content: url('http://i.imgur.com/tx9f5QD.png');
   width: 350px;
   height: 500px;
 }
+#LeBron:hover{
+  margin-top: -300px;
+}
 #Kobe {
   margin-top: 50px;
-  width: 300px;
-  height: 450px;
-  content: url('http://i607.photobucket.com/albums/tt157/bigheadkyle2/Player%20Cuts/NBA/kobebryant.png');
+  width: 200px;
+  height: 400px;
+  content: url('http://www.stickpng.com/assets/images/584564df7c25fb418d2c2996.png');
+}
+#Kobe:hover{
+  margin-top: -300px;
 }
 .lineUp {
   top: 500px;
@@ -59,18 +75,15 @@ body, a:link, a:visited, a:active{
   width: 200px;
   height: 300px;
 }
-#Lakers {
-  width: 150px;
-  height: 100px;
-  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/1000px-Los_Angeles_Lakers_logo.svg.png');
-}
-.rotate {
-
-}
 #GSW {
   width: 100px;
   height: 100px;
   content: url('http://i.imgur.com/oyEgJ.png');
+}
+#Lakers {
+  width: 150px;
+  height: 100px;
+  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/1000px-Los_Angeles_Lakers_logo.svg.png');
 }
 #Cavs {
   width: 150px;
